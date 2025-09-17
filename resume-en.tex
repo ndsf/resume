@@ -1,0 +1,99 @@
+% !Mode:: "TeX:UTF-8"
+% +-----------------------------------------------------------------------------
+% | File: resume-en
+% | Author: huxuan
+% | E-mail: i(at)huxuan.org
+% | Created: 2012-12-18
+% | Last modified: 2020-04-20
+% | Description:
+% |     A English Resume Example in LaTeX based on resumecls
+% |
+% | Copyright (c) 2012-2020 by huxuan. All rights reserved.
+% +-----------------------------------------------------------------------------
+
+\documentclass[color]{resumecls}
+
+\include{resume-common}
+
+\name{Congyong Chen}
+\organization{Shanghai Jiao Tong University}
+\address{800 Dongchuan Road, Minhang District, Shanghai, 200240}
+\mobile{+86 156 1177 5012}
+\mail{619455181@qq.com}
+\homepage{http://github.com/ndsf}
+\leftfooter{Last Modified: \today}
+\rightfooter{\url{http://github.com/ndsf}}
+
+\ctexset{today=small}
+
+\begin{document}
+\begin{table}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\heading{Education}
+\entry{0em}{Xrr}{{\bfseries Shanghai Jiao Tong University} & Shanghai & Sep 2021 - Expected Jun 2026}
+\entry{2em}{lXX}{%
+    Ph.D. Candidate \quad Department of Computer Science and Engineering \\
+    Research Focus: Memory Storage Systems, Distributed Systems \\
+    Skills: C, C++, RDMA, CXL, DPU, Linux Kernel, File Systems, Indexing, Persistent Memory \\
+}
+\entry{0em}{Xrr}{{\bfseries Beihang University} & Beijing & Sep 2017 - Jun 2021}
+\entry{2em}{lXX}{%
+    Bachelor's Degree & School of Software & Software Engineering \\
+}
+% \entry{2em}{lXX}{%
+%     Major Courses & Software Engineering Fundamentals(95), Data Management Technology(96), Object-Oriented Programming (Java)(94), Programming Fundamentals Training(100), Discrete Mathematics(96), Data Structures and Programming(99), Hardware Foundation for Programming(96), Discrete Mathematics (2)(96), Algorithm Analysis and Design(100), Engineering Mathematical Analysis(1)(94), Engineering Mathematical Analysis(2)(89), Probability and Statistics A(97), Computer Networks(94) \\
+% }
+\entry{2em}{lXX}{%
+     GPA & Average GPA: 3.6835, Ranked 17/167. % 2017-2018 GPA: 3.79/4.00, Ranked 5/164. 2018-2019 GPA: 3.78, Ranked 12/167. 2019-2020 First Semester GPA: 3.88/4.00. Annual GPA is higher than average GPA as only major course grades are counted. \\
+}
+\entry{2em}{lXX}{%
+     Language Skills & Passed CET-4 and CET-6 exams with scores of 596 and 616 respectively. \\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\heading{Research Experience}
+\entry{0em}{Xr}{{\bfseries Shanghai Jiao Tong University} & Sep 2021 - Present}
+\entry{2em}{X}{Data-Driven Software Technology Lab \quad Ph.D. Student \quad Memory Storage Systems, Distributed Systems \quad Advisor: Prof. Linpeng Huang}
+\entry{2em}{X}{%
+    Participated in the project "\textbf{Disaggregated Memory Computing Framework Research}". Designed high-concurrency hash indexes for RDMA and CXL high-speed networks. Existing indexes are limited by the constrained functionality of network primitives, suffering from write position lookup, concurrency conflicts, resize waiting, and cache coherence overheads during writes, which degrade performance in high-concurrency and skewed scenarios. This project achieves high-performance hash indexing through redesigning index structures, leveraging RDMA features such as shared receive queues, counter-triggered compactions, and optimistic resize detection, implemented with RDMA and C++. Currently submitting first-author paper "Redesigning Hash Indexes on Disaggregated Memory for Minimal Network Overhead" \cite{chen2026rdma} to ICDE 2026 (CCF-A conference). \\
+}
+\entry{2em}{X}{%
+    Participated in Huawei project "\textbf{High-Performance and High-Reliability File System for New Media}". Research on Linux kernel file systems based on openEuler's EulerFS for persistent CPU cache environments. Published first-author paper "Redesigning Data and Metadata Updates in PM File Systems with Persistent CPU Caches" \cite{chen2024redesigning} at DASFAA 2024 (CCF-B conference). This paper proposes that completely eliminating cache line flushes can cause write amplification due to random cache line evictions, and selects the most effective update mechanism by monitoring system calls and memory-mapped file access patterns. Published first-author paper "FusionFS: A Contention-Resilient File System for Persistent CPU Caches" \cite{chen2025fusionfs} in ACM TACO 2025 (CCF-A journal). This paper further categorizes and uses techniques such as cache allocation to mitigate various contentions faced by persistent CPU caches, implementing the Linux kernel file system FusionFS in C \url{https://github.com/SJTU-DDST/FusionFS}. \\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If there is no publications, just comment this part.
+% \heading{Publications}
+% \vspace{-6em}
+% \bibliography{resume}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sample for two or more pages.
+\end{table}
+\clearpage
+\begin{table}
+\heading{Research Experience}
+\entry{0em}{Xr}{{\bfseries Beihang University} & Sep 2019 - Nov 2019}
+\entry{2em}{X}{%
+    Participated in the project "\textbf{Compressed Video Quality Enhancement}", specifically responsible for "reproducing partial comparison experiment code and comparing results". Co-authored as fourth author the paper "Multi-level Wavelet-based Generative Adversarial Network for Perceptual Quality Enhancement of Compressed Video" \cite{wang2020multi}, published at ECCV 2020 (CCF-B conference). \\
+}
+\heading{Work Experience}
+\entry{0em}{Xr}{{\bfseries Megvii Technology} & Jul 2019 - Aug 2019}
+\entry{2em}{X}{IC Team \quad Algorithm Intern}
+\entry{4em}{X}{%
+    Participated in data acquisition and quantized model training. \\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\heading{Awards and Honors}
+\entry{0em}{Xr}{%
+    Beihang University Academic Excellence Scholarship First Prize (2019-2020) & Dec 2020 \\
+    Beihang University Academic Excellence Scholarship First Prize (2018-2019) & Dec 2019 \\
+    Beihang University Academic Excellence Scholarship First Prize (2017-2018) & Dec 2018 \\
+    12th Beihang Programming Contest Third Prize & Dec 2016 \\
+    21st National Olympiad in Informatics in Provinces (NOIP) First Prize & Dec 2015 \\
+}
+
+\heading{Publications}
+\vspace{-6em}
+\bibliography{resume}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{table}
+\end{document}

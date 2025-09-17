@@ -1,0 +1,24 @@
+{
+  // 使用 XeLaTeX 作为默认编译方式
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "XeLaTeX",
+      "tools": ["xelatex"]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  // 启用自动换行
+  "editor.wordWrap": "on"
+}
