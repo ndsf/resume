@@ -55,21 +55,21 @@
 %     主要课程 &  	软件工程基础(95)\ 	数据管理技术(96)\ 面向对象程序设计(JAVA)(94)\ 程序设计基础训练(100) \ {离散数学(信息类)(96)}\  	数据结构与程序设计(信息类)(99)\ 面向程序设计的硬件基础(96)\ 	离散数学（2）(96)\  	算法分析与设计 (100)\ 	工科数学分析(1)(94)\ 	工科数学分析(2)(89)\  {概率统计A(97)}\ 计算机网络 (94)\\
 % }
 \entry{2em}{lXX}{%
-     GPA &  	平均GPA为3.6835，年级排名为17/167，专业课程排名为5/167。% 2017~2018学年GPA为3.79/4.00，年级排名为5/164，2018~2019学年GPA为3.78，年级排名为12/167，2019~2020上半学年GPA为3.88/4.00。由于只统计专业课程成绩，学年GPA高于平均GPA。\\
+     GPA &  	平均GPA为3.6835，年级排名为17/167，只计算专业课程排名为5/167。% 2017~2018学年GPA为3.79/4.00，年级排名为5/164，2018~2019学年GPA为3.78，年级排名为12/167，2019~2020上半学年GPA为3.88/4.00。由于只统计专业课程成绩，学年GPA高于平均GPA。\\
 }
 \entry{2em}{lXX}{%
-     外语 & 通过四六级考试，四级成绩为596分，六级成绩为616分。 \\
+     外语 & 四级成绩为596分，六级成绩为616分。 \\
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \heading{科研经历}
 \entry{0em}{Xr}{{\bfseries 上海交通大学} & 2021.9 - 至今}
 \entry{2em}{X}{数据驱动软件技术实验室 \quad 博士研究生 \quad 内存存储系统、分布式系统方向 \quad 导师黄林鹏教授}
 \entry{2em}{X}{% 分离式内存架构将计算和内存资源分成独立的池，通过RDMA、CXL等高速网络连接，可以提高资源利用率。
-    参与项目“\textbf{分离式内存计算框架研究}”。面向RDMA、CXL等高速网络设计高并发分布式哈希索引。现有索引受限于网络原语的有限功能，在写入期间存在写入位置查找、并发冲突、调整大小等待、缓存一致性等开销，降低高并发和偏斜场景性能。本项目通过重新设计索引结构、利用共享接收队列等RDMA特性、计数器触发合并、乐观调整大小检测等方式，基于RDMA、C++实现高性能哈希索引。以第1作者身份正在投稿论文。\\
+    参与项目“\textbf{分离式内存（DM）计算框架研究}”。面向RDMA、CXL等高速网络设计高并发分布式哈希索引。现有索引受限于网络原语的有限功能，在写入期间存在写入位置查找、并发冲突、调整大小等待、缓存一致性等开销，降低高并发和偏斜场景性能。本项目通过重新设计索引结构、利用共享接收队列等RDMA特性、计数器触发合并、乐观调整大小检测等方式，基于RDMA、C++实现高性能哈希索引。以第1作者身份正在投稿论文。针对现有DM范围索引依赖节点锁导致的写入位置查找及热点页写竞争，以及传统无锁Bw-tree在DM上存在指针追踪等问题，设计面向DM的Bw-tree。通过顺序追加式缓冲区、多区域指纹过滤、就地增量合并以及页面读写聚合，基于RDMA/CXL实现无锁范围索引。以第 1 作者身份正在投稿论文。\\
     % 《Redesigning Hash Indexes on Disaggregated Memory for Minimal Network Overhead》\cite{chen2026rdma}到ICDE 2026（CCF-A会议）。 \\
 }
 \entry{2em}{X}{%
-    参与CCF-华为胡杨林基金系统软件专项项目“\textbf{面向新介质的高性能高可靠文件系统}"。面向持久CPU缓存环境（如Intel eADR、CXL GPF），基于openEuler的EulerFS研究Linux内核文件系统。以第1作者身份发表文章《Redesigning Data and Metadata Updates in PM File Systems with Persistent CPU Caches》 \cite{chen2024redesigning}于DASFAA 2024（CCF-B会议）。本文提出完全去除缓存行刷新会因随机缓存行驱逐导致写放大，并通过监控系统调用和内存映射的文件访问模式，选择最有效的更新机制。以第1作者身份发表文章《FusionFS: A Contention-Resilient File System for Persistent CPU Caches》 \cite{chen2025fusionfs}于ACM TACO 2025（CCF-A期刊）。本文进一步分类并使用缓存分配等技术缓解持久CPU缓存面临的多种争用，基于C语言实现Linux内核文件系统FusionFS \url{https://github.com/SJTU-DDST/FusionFS}。 \\
+    参与CCF-华为胡杨林基金系统软件专项项目“\textbf{面向新介质的高性能高可靠文件系统}"。面向持久CPU缓存环境（如Intel eADR、CXL GPF），基于openEuler的EulerFS研究Linux内核文件系统。以第1作者身份发表文章《Redesigning Data and Metadata Updates in PM File Systems with Persistent CPU Caches》 \cite{chen2024redesigning}于DASFAA 2024（CCF-B会议）。本文提出完全去除缓存行刷新会因随机缓存行驱逐导致写放大，并通过监控系统调用和内存映射的文件访问模式，选择最有效的更新机制。以第1作者身份发表文章《FusionFS: A Contention-Resilient File System for Persistent CPU Caches》 \cite{chen2025fusionfs}于ACM TACO 2025（CCF-A期刊）。本文进一步分类并使用缓存分配等技术缓解持久CPU缓存面临的多种争用，基于C语言实现Linux内核文件系统FusionFS \url{https://github.com/SJTU-DDST/FusionFS}。发明专利《索引方法、程序产品、介质以及电子设备》（CN119493769A）。 \\
     %这里可以使用bibtex，如\cite{label} \\
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
